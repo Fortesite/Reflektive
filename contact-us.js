@@ -3,7 +3,7 @@ var data = require('./data.json');
 const url = process.argv[2]
 
 if ( !url ) {
-    console.error('Please enter URL of page.')
+    console.error('Please Enter URL of Page.')
     process.exit(1)
 }
 
