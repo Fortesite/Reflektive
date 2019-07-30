@@ -36,6 +36,4 @@ if ( !url ) {
     fullPage: true
     });
     await browser.close();
-    setTimeout(function() { console.log('Slow and steady wins the race.'); }, 5000);
-console.log('The last shall be the first!');
 })();
