@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "alldata": "node all_data.js",
     "footer-newsletter": "node footer-newsletter.js https://reflektivedev.wpengine.com/",
     "contact": "node contact-us.js https://reflektivedev.wpengine.com/contact",
     "engagement-lp-customers": "node engagement-lp-customers.js https://reflektivedev.wpengine.com/engagement-lp-customers/",
