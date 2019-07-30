@@ -5,7 +5,7 @@ var data = require('./data.json');
 var dateFormat = require('dateformat');
 (async() => {  
 
-    const browser = await puppeteer.launch({ignoreDefaultArgs: ['--disable-extensions'],headless: false});
+    const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox'],headless: false});
     const page = await browser.newPage();
     await page.setViewport({ width: 1280, height: 800 })
     for(var myKey in urldata) {
