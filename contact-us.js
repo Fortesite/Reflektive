@@ -1,11 +1,11 @@
 const puppeteer = require('puppeteer');
 var data = require('./data.json');
-const url = process.argv[2]
+// const url = process.argv[2]
 
-if ( !url ) {
-    console.error('Please Enter URL of page.')
-    process.exit(1)
-}
+// if ( !url ) {
+//     console.error('Please Enter URL of page.')
+//     process.exit(1)
+// }
 
 (async() => {  
 
@@ -13,7 +13,7 @@ if ( !url ) {
     const page = await browser.newPage();
     await page.setUserAgent('Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36');
     await page.setViewport({ width: 1280, height: 800 })
-    await page.goto(url, {waitUntil: 'networkidle2'});
+    await page.goto('http://mywebdev.a2hosted.com/wft/test.html', {waitUntil: 'networkidle2'});
 
     await page.type('#FirstName', data.contact.Firstname);
     await page.type('#LastName', data.contact.Lastname);
