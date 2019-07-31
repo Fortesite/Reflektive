@@ -1,6 +1,6 @@
 const http = require('http');
 const port = process.env.PORT || 3000
-const puppeteer = require('puppeteer');
+
 var urll = req.query.url;
 console.log(urll);
 const server = http.createServer((req, res) => {
