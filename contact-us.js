@@ -9,7 +9,7 @@ if ( !url ) {
 
 (async() => {  
 
-    const browser = await puppeteer.launch({headless: false,ignoreDefaultArgs: ['--disable-extensions']});
+    const browser = await puppeteer.launch({headless: false,args: ['--no-sandbox', '--disable-setuid-sandbox'],ignoreDefaultArgs: ['--disable-extensions']});
     const page = await browser.newPage();
     await page.setViewport({ width: 1280, height: 800 })
     await page.goto(url, {waitUntil: 'networkidle2'});
