@@ -7,11 +7,11 @@ async function getBrowserPage() {
   return browser.newPage();
 }
 
-exports.screenshot = async (req, res) => {
-  const url = req.query.url;
+exports.screenshot = async () => {
+  const url = "https://reflektivedev.wpengine.com/contact/";
 
   if (!url) {
-    return res.send('Please provide URL as GET parameter, for example: <a href="?url=https://example.com">?url=https://example.com</a>');
+    console.log('Please provide URL as GET parameter, for example: <a href="?url=https://example.com">?url=https://example.com</a>');
   }
 
   if (!page) {
@@ -19,9 +19,11 @@ exports.screenshot = async (req, res) => {
   }
 
   await page.goto(url);
-  const imageBuffer = await page.screenshot();
-  res.set('Content-Type', 'image/png');
-  res.send(imageBuffer);
+  await page.screenshot();
+  await page.screenshot({
+    path: 'contact-us.jpg',
+    fullPage: true
+    });
 };
 // const puppeteer = require('puppeteer');
 // var data = require('./data.json');
