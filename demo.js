@@ -1,4 +1,4 @@
-console.log("Done");
+console.log("Done!");
 const puppeteer = require('puppeteer');
 let page;
 
