@@ -6,7 +6,7 @@ async function run() {
     const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
     const page = await browser.newPage();
     await page.setViewport({ width: 1280, height: 800 })
-    await page.goto("https://reflektivedev.wpengine.com/contact/", {timeout: 120000,slowMo: 2000,waitUntil: ['load', 'networkidle'],networkIdleTimeout: 5000});
+    await page.goto("https://reflektivedev.wpengine.com/contact/", {timeout: 120000,slowMo: 2000,waitUntil: ['load', 'networkidle2'],networkIdleTimeout: 5000});
 
     await page.waitFor(1000);
     if (await page.$('#FirstName') !== null){
