@@ -51,7 +51,7 @@ if (await page.$('#Phone') !== null){
     }
     
     
-    console.log('Form Submitted');
+    console.log('Form Submitted!');
     console.log(data.contact.Firstname);
     await page.waitFor(1000);
 
@@ -59,6 +59,7 @@ if (await page.$('#Phone') !== null){
     path: 'Screenshots/demo-click.jpg',
     fullPage: true
     });
+    console.log(data.contact.inquiry_details);
     await browser.close();
 }
 run();
