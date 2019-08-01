@@ -11,6 +11,7 @@ async function run() {
     await page.waitFor(10000);
     if (await page.$('#FirstName') !== null){
         await page.type('#FirstName', data.contact.Firstname);
+        console.log('First Name');
     }
     if (await page.$('#LastName') !== null){
        await page.type('#LastName', data.contact.Lastname);
