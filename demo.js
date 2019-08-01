@@ -1,3 +1,4 @@
+console.log("Done");
 const puppeteer = require('puppeteer');
 let page;
 
@@ -24,7 +25,7 @@ exports.screenshot = async () => {
     path: 'contact-us.jpg',
     fullPage: true
     });
-  console.log("Done");
+
 };
 // const puppeteer = require('puppeteer');
 // var data = require('./data.json');
