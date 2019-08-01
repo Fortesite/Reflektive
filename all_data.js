@@ -56,7 +56,9 @@ async function run() {
         fullPage: true
         });
         if( myKey !== "footer_newsletter" ){
-            await page.click('.mktoButton');
+            if (await page.$('.mktoButton') !== null){
+                await page.click('.mktoButton');
+            }
         }else{
             await page.click('input[type="submit"]');
         }
