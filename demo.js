@@ -42,7 +42,7 @@ if (await page.$('#Phone') !== null){
     }
     
     await page.screenshot({
-    path: '/Screenshots/demo.jpg',
+    path: 'demo.jpg',
     fullPage: true
     });
      if (await page.$('.mktoButton') !== null){
@@ -53,7 +53,7 @@ if (await page.$('#Phone') !== null){
     console.log('Form Submitted');
     await page.waitFor(1000);
     await page.screenshot({
-    path: '/Screenshots/demo-click.jpg',
+    path: 'demo-click.jpg',
     fullPage: true
     });
     await browser.close();
