@@ -54,10 +54,15 @@ if (await page.$('#Phone') !== null){
     console.log('Form Submitted');
     console.log(data.contact.Firstname);
     await page.waitFor(1000);
+    var pathimg = await page.screenshot({
+    path: 'Screenshots/demo-click1.jpg',
+    fullPage: true
+    });
     await page.screenshot({
     path: 'Screenshots/demo-click.jpg',
     fullPage: true
     });
+    console.log("Path - "+pathimg);
     await browser.close();
 }
 run();
