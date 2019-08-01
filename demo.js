@@ -8,7 +8,7 @@ async function run() {
     await page.setViewport({ width: 1280, height: 800 })
     await page.goto("https://reflektivedev.wpengine.com/contact/", {waitUntil: 'networkidle2'});
 
-    await page.waitFor(10000);
+    await page.waitFor(1000);
     if (await page.$('#FirstName') !== null){
         await page.type('#FirstName', data.contact.Firstname);
         console.log('First Name');
@@ -43,7 +43,7 @@ if (await page.$('#Phone') !== null){
     }
     
     await page.screenshot({
-    path: './Screenshots/demo.jpg',
+    path: 'Screenshots/demo.jpg',
     fullPage: true
     });
      if (await page.$('.mktoButton') !== null){
@@ -55,7 +55,7 @@ if (await page.$('#Phone') !== null){
     console.log(data.contact.Firstname);
     await page.waitFor(1000);
     await page.screenshot({
-    path: './Screenshots/demo-click.jpg',
+    path: 'Screenshots/demo-click.jpg',
     fullPage: true
     });
     await browser.close();

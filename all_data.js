@@ -3,9 +3,9 @@ var urldata = require('./add_url.json');
 var data = require('./data.json');
 //npm install dateformat
 var dateFormat = require('dateformat');
-(async() => {  
+async function run() { 
 
-    const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox'],headless: false});
+    const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
     const page = await browser.newPage();
     await page.setViewport({ width: 1280, height: 800 })
     for(var myKey in urldata) {
@@ -70,4 +70,5 @@ var dateFormat = require('dateformat');
                 
     }
     await browser.close();
-})();
+};
+run();
