@@ -16,7 +16,6 @@ async function run() {
 		.click('.mktoButton')
 
 	console.log(screenshot)
- 	await chromeless.wait(4000)
   	await chromeless.end()
 }
 run().catch()
