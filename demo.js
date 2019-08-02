@@ -51,7 +51,7 @@ if (await page.$('#Phone') !== null){
     }
     
     
-    console.log('Form Submitted!');
+    console.log('Form Submitted');
     console.log(data.contact.Firstname);
     await page.waitFor(1000);
 
