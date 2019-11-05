@@ -34,7 +34,7 @@
     "babel-preset-env": "^1.7.0",
     "chromeless": "^1.5.2",
     "dateformat": "^3.0.3",
-    "mongoose": "^5.6.7",
+    "mongoose": "^5.7.5",
     "puppeteer": "^1.18.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
